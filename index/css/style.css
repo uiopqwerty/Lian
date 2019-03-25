@@ -10,10 +10,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.section {
-    margin: 0 230px;
+.section, .menu, .footer{
+    width: 1600px;
+    padding-left: 230px;
+    padding-right: 230px;
 }
-
 
 /* style for header*/
 
@@ -26,7 +27,6 @@ header {
 
 .menu {
     height: 100px;
-    width: 1600px;
     box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.15);
     color: #fff;
     display: flex;
@@ -102,6 +102,9 @@ header {
 
 .button-arrow-left,
 .button-arrow-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     background: transparent;
@@ -119,10 +122,12 @@ header {
 
 .button-arrow-left {
     margin-left: 115px;
+    padding-right: 8px;
 }
 
 .button-arrow-right {
     margin-right: 115px;
+    padding-left: 8px;
 }
 
 
@@ -175,26 +180,142 @@ header {
 .cards {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
 }
 
 .card {
     border: 1px solid #000;
+    width: 360px;
 }
 
-.card1 {
-    margin-top: -100px;
-}
-
-.card2 {
-    margin-top: -200px;
+.card1{
+    margin-top: 0px;
 }
 
 .card4 {
-    margin-top: -155px;
+    margin-top: -70px;
 }
 
 .card5 {
-    margin-top: -270px;
+    margin-top: -170px;
+}
+
+.card6{
+    margin-top: 30px;
+}
+
+.card7{
+    margin-top: -70px;
+}
+
+.card8{
+    margin-top: -70px;
+}
+
+.card9{
+    margin-top: 30px;   
+}
+
+.card10{
+    margin-left: 389px;
+    margin-top: -170px;
+}
+
+.hero-button{
+    width: 125px;
+    height: 30px;
+    background-color: #959595;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20.57px;
+    text-transform: uppercase;
+    letter-spacing: 0.76px;
+    border: none;
+    text-decoration: none;
+    margin-left: 507px;
+    margin-top: 35px;
+}
+
+/*style for footer*/
+.footer{
+    height: 300px;
+    box-shadow: 0 -3px 5px 1px rgba(163, 163, 163, 0.1);
+    background-color: #ffffff;
+}
+
+.footer-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo{
+    height: 145px;
+}
+
+.social-links{
+    height: 60px;
+    border-bottom: 1px solid rgba(225, 225, 225, 0.7);
+    border-top: 1px solid rgba(225, 225, 225, 0.7);
+}
+
+.social{
+    color: #777777;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    margin-right: 50px;
+}
+
+.copyright{
+    height: 95px;
+    color: #9c9c9c;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.copyright span{
+    color: #000000;
+    letter-spacing: 0.33px;
+}
+
+@media(max-width: 1200px){
+    .header{
+        width: 992px;
+    }
+
+    .menu{
+        width: 992px;
+    }
+
+    .section{
+        width: 992px;
+    }
+
+    .footer{
+        width: 992px;
+    }
+
+    .card{
+        width: 260px;
+    }
+    .navbar{
+        display: none;
+    }
+}
+
+@media (max-width: 992px){
+    .card{
+      width: 48%;
+    }
+    .navbar{
+        display: none;
+    }
+    .card{
+        width: 200px;
+    }
 }
