@@ -6,12 +6,12 @@
 body {
     margin: auto;
     padding: auto;
-    width: 1600px;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
 .section, .menu, .footer{
-    width: 1600px;
+    width: 100%;
     padding-left: 230px;
     padding-right: 230px;
 }
@@ -19,6 +19,7 @@ body {
 /* style for header*/
 
 header {
+    width: 100%;
     height: 750px;
 }
 
@@ -26,16 +27,13 @@ header {
 /* style for menu*/
 
 .menu {
+    width: 100%;
     height: 100px;
     box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.15);
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar {
-    margin-right: 230px;
 }
 
 #logo-link {
@@ -58,14 +56,45 @@ header {
     border-bottom: 2px solid #000;
 }
 
-.img {
-    margin-left: 230px;
+
+.menu-button{
+    /*display: none;*/
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    position: relative;
 }
 
+.menu-button span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -1px;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+}
 
+.menu-button span::before,
+.menu-button span::after{
+    content: '';
+    display: block;
+    transition: 0.5;
+}
+
+.menu-button span::before {
+    transform: translateY(-5px);
+}
+
+.menu-button span::after {
+    transform: translateY(5px);
+}
 /* style for hero-header*/
 
 .hero-header {
+    width: 100%;
     height: 650px;
     background: url(../index_img/hero_bg.jpg) no-repeat top center /cover;
     box-shadow: inset 0px 0px 277px 3px #4c3f37;
@@ -185,10 +214,16 @@ header {
 
 .card {
     border: 1px solid #000;
-    width: 360px;
+    width: 100%;
+    height: 100%;
 }
 
-.card1{
+.card:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+/*.card1{
     margin-top: 0px;
 }
 
@@ -219,7 +254,7 @@ header {
 .card10{
     margin-left: 389px;
     margin-top: -170px;
-}
+}*/
 
 .hero-button{
     width: 125px;
@@ -233,7 +268,6 @@ header {
     letter-spacing: 0.76px;
     border: none;
     text-decoration: none;
-    margin-left: 507px;
     margin-top: 35px;
 }
 
@@ -283,28 +317,46 @@ header {
     letter-spacing: 0.33px;
 }
 
-@media(max-width: 1200px){
-    .header{
-        width: 992px;
-    }
-
-    .menu{
-        width: 992px;
-    }
-
-    .section{
-        width: 992px;
-    }
-
-    .footer{
-        width: 992px;
+@media(min-width:1200px) and (max-width: 1600px){
+    body{
+        margin: auto;
+        padding: auto;
+        text-align: center;
     }
 
     .card{
-        width: 260px;
+        width: 60%;
+        height: 80%;
     }
+
+   
+    
+}
+
+@media(min-width:1000px) and (max-width: 1200px){
+    .header{
+        width: 65%;
+    }
+
+    .section{
+        width: 65%;
+    }
+
+    .footer{
+        width: 65%;
+    }
+
+    .card{
+        width: 75%;
+
+    }
+
     .navbar{
         display: none;
+    }
+
+    .img{
+        float: left;
     }
 }
 
@@ -314,8 +366,5 @@ header {
     }
     .navbar{
         display: none;
-    }
-    .card{
-        width: 200px;
     }
 }
