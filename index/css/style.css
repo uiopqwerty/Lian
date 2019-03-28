@@ -141,6 +141,7 @@ header {
 }
 
 .title h1 {
+    display: flex;
     width: 700px;
     height: 56px;
     background-color: #000000;
@@ -207,6 +208,10 @@ header {
     margin-bottom: 30px;
 }
 
+.section-menu h3{
+    display: none;
+}
+
 .small-navbar {
     display: flex;
     justify-content: center;
@@ -235,14 +240,18 @@ header {
 
 .cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .card {
     border: 1px solid #000;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    margin-right: 5px;
+}
+
+.product{
+    width: 33%;
 }
 
 .card:hover{
@@ -250,7 +259,13 @@ header {
 
 }
 
+.button_div{
+    display: block;
+    text-align: center;
+}
+
 .hero-button{
+    margin-left: -25px;
     width: 125px;
     height: 30px;
     background-color: #959595;
@@ -311,20 +326,10 @@ header {
     letter-spacing: 0.33px;
 }
 
-@media(min-width:1200px) and (max-width: 1600px){
-    body{
-        margin: auto;
-        padding: auto;
-        text-align: center;
+@media (min-width: 1024px) and (max-width: 1199px){
+    .navbar{
+        margin-right: -100px;
     }
-
-    .card{
-        width: 60%;
-        height: 80%;
-    }
-
-   
-    
 }
 
 @media (max-width:1024px){
@@ -338,13 +343,24 @@ header {
 
     .card{
         width: 80%;
+        height: 90%;
+    }
+
+    .title h1{
+        justify-content: center;
+        width: 580px;
+        font-size: 40px;
+    }
+
+    .title h3{
+        font-size: 15px;
     }
 }
 
 @media (max-width: 992px){
     .card{
-      width: 80%;
-      display: inline;
+      width: 70%;
+      height: 80%;
     }
     .navbar{
         display: none;
@@ -358,14 +374,61 @@ header {
         border: none;
     }
 
+    .section-menu h3{
+        display: inline;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 24px;
+        text-transform: uppercase;
+        letter-spacing: 7.2px;
+    }
+
     #menu-button{
         display: flex;
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         
     }
     #nav-span{
         height: 1px;
         width: 10px;
+    }
+
+    .title h1{
+        justify-content: center;
+        width: 500px;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 375px){
+    .section, .menu, .footer{
+        width: 100%;
+    }
+
+    .title h1{
+        text-align: center;
+        height: 60px;
+        line-height: 30px;
+        width: 200px;
+        font-size: 20px;
+    }
+
+    .title h3{
+        font-size: 10px;
+    }
+
+    .img{
+        margin-left: -150px;
+    }
+
+    .button-arrow-left{
+        float: left;
+    }
+
+    #menu-button{
+        height: 60px;
+        width: 60px;
     }
 }
